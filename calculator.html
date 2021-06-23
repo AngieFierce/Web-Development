@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body {
+			border: solid 2px black;
+			width: 50%;
+			box-shadow:5px 5px 10px grey;
+			margin: 100px auto;
+			padding-left: 10px;
+			padding-bottom: 10px;
+		}
+		h1 {
+			text-align: center;
+			text-shadow: 2px 2px grey;
+		}
+		input,select,button {
+			border-radius: 10px;
+		}
+	</style>
+	<title>Calculator</title>
+</head>
+<body>
+<h1>CALCULATOR</h1><br>
+Enter the first number: <input type="text" id="first"><br><br>
+Enter the second number: <input type="text" id="second"><br><br>
+Select Operation: <select id="operation">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select>
+<button id="result" onclick="op()">=</button><br><br>
+Answer: <input type="text" id="answer">
+<script type="text/javascript">
+	function op(){
+	var first=document.getElementById("first").value;
+	first=parseInt(first)
+	var second=document.getElementById("second").value;
+	second=parseInt(second)
+	var operation=document.getElementById('operation').value;
+	
+		if (operation == "+") {
+			document.getElementById("answer").value=first+second;
+		}
+		else if (operation == "-") {
+			document.getElementById("answer").value=first-second;
+		}
+		else if (operation == "*") {
+			document.getElementById("answer").value=first*second;
+		}
+		else {
+			document.getElementById("answer").value=first/second;
+		}
+		
+
+		
+	}
+</script>
+</body>
+</html>
